@@ -74,8 +74,8 @@ The project satisfies the group-of-4 complexity requirements:
 
 | Student | Branch | Responsibility |
 |---|---|---|
-| Gio | `feature/body-sensing` | MediaPipe Pose, geometric feature extraction, OSC sender |
-| Rani | `feature/audio-sensing` | librosa + sounddevice, audio feature extraction, OSC sender |
+| Rani | `feature/body-sensing` | MediaPipe Pose, geometric feature extraction, OSC sender |
+| Gio | `feature/audio-sensing` | librosa + sounddevice, audio feature extraction, OSC sender |
 | Stella | — | Wekinator model training, OSC routing, regression and classification setup |
 | Sam | `feature/rendering-streaming` | Processing renderer, OBS + mediamtx streaming setup |
 
