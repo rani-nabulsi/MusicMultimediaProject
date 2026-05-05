@@ -1,3 +1,5 @@
+![System Architecture](System_Architecture.png)
+
 # MusicMultimediaProject
 Music &amp; Multimedia Streaming Over the Internet Project
 
