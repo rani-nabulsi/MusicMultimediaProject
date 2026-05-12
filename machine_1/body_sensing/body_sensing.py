@@ -80,6 +80,7 @@ def main():
                 continue
 
             # MediaPipe expects RGB input: openCV captures BGR (converts before processing)
+            image = frame
             image.flags.writeable = False
             image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
             results = pose.process(image)
@@ -100,9 +101,9 @@ def main():
             cv2.imshow("Body Sensing", cv2.flip(image, 1))
             if cv2.waitKey(5) & 0xFF == 27:
                 break
-                
-cap.release()
-cv2.destroyAllWindows()
+
+    cap.release()
+    cv2.destroyAllWindows()
 
 if __name__ == "__main__":
     main()
