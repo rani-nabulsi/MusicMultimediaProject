@@ -91,7 +91,7 @@ The project satisfies the group-of-4 complexity requirements:
 
 Machine 1 runs two Python scripts in parallel, both sending OSC to Machine 2 at 30 Hz.
 
-#### Body sensing (Gio)
+#### Body sensing (Rani)
 
 Uses `mediapipe.solutions.pose` to track 33 body keypoints per frame from the webcam. From the raw keypoint positions, four derived geometric features are computed and normalised to [0, 1]:
 
@@ -106,7 +106,7 @@ Uses `mediapipe.solutions.pose` to track 33 body keypoints per frame from the we
 
 This directly extends the Lab 3 Exercise 2 workflow (MediaPipe hand landmarks → OSC → Wekinator), scaled from 21 hand points to full-body pose.
 
-#### Audio sensing (Rani)
+#### Audio sensing (Gio)
 
 Uses `sounddevice` to read microphone frames in real time and `librosa` to compute six audio features per frame, normalised to [0, 1]:
 
@@ -208,8 +208,8 @@ The 30 Hz rate matches the webcam frame rate, keeping all three layers synchroni
 ```
 body-conductor/
 ├── machine1/
-│   ├── body_sensing/         # Gio — MediaPipe Pose + OSC sender
-│   └── audio_sensing/        # Rani — librosa + sounddevice + OSC sender
+│   ├── body_sensing/         # Rani — MediaPipe Pose + OSC sender
+│   └── audio_sensing/        # Gio — librosa + sounddevice + OSC sender
 ├── machine2/
 │   ├── processing_renderer/  # Sam — Processing sketch
 │   └── wekinator_project/    # Stella — Wekinator project file
